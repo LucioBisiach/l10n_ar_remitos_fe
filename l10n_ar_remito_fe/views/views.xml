@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+  
+    <record model="ir.ui.view" id="remito_fe_account_move">
+        <field name="name">Invoice</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <field name="ref" position="after">
+              <label for="n_remito_pdv" />
+                <div class="d-flex">
+                  <field name="n_remito_pdv" placeholder="PDV"/>
+                  <span class="o_form_label mx-3"> - </span>
+                  <field name="n_remito" placeholder="N° Remito"/>
+                </div>
+            </field>
+        </field>
+    </record>
+
+  </data>
+</odoo>
